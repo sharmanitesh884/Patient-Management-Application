@@ -1,0 +1,13 @@
+{% extends "Patient_Management_app/base.html" %}
+{% block body_block %}
+<div class="container">
+	<div class="jumbotron">
+		<h2>Welcome to the Patients Management Applictaions</h2>
+		{% if user.is_authenticated %}
+		<h2>Hello {{ user.username }}</h2>
+		{% else %}
+		<h2>Register or Login Above</h2>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}
